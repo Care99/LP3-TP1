@@ -21,3 +21,7 @@ listing-4.1 : src/capitulo4/4.1/thread-create.c
 listing-4.5 : src/capitulo4/4.5/detached.c
 	mkdir -p bin/capitulo4/4.5/
 	gcc src/capitulo4/4.5/detached.c -o bin/capitulo4/4.5/detached.o -lpthread
+
+listing-4.9 : src/capitulo4/4.9/cxx-exit.cpp
+	mkdir -p bin/capitulo4/4.9/
+	g++ src/capitulo4/4.9/cxx-exit.cpp -o bin/capitulo4/4.9/cxx-exit.o -lpthread
