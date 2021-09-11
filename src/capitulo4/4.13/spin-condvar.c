@@ -42,7 +42,6 @@ pthread_t thread_id;
 int main(){
    initialize_flag();
   pthread_create(&thread_id, NULL, thread_function, NULL);
-  sleep(1);
   set_thread_flag(1);
   sleep(1);
   return 0;
