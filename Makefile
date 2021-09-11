@@ -17,3 +17,7 @@ listing-3.4 : src/capitulo3/3.4/fork-exec.c
 listing-4.1 : src/capitulo4/4.1/thread-create.c
 	mkdir -p bin/capitulo4/4.1/
 	gcc src/capitulo4/4.1/thread-create.c -o bin/capitulo4/4.1/thread-create.o -lpthread
+
+listing-4.5 : src/capitulo4/4.5/detached.c
+	mkdir -p bin/capitulo4/4.5/
+	gcc src/capitulo4/4.5/detached.c -o bin/capitulo4/4.5/detached.o -lpthread
