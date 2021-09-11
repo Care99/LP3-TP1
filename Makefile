@@ -29,3 +29,7 @@ listing-4.9 : src/capitulo4/4.9/cxx-exit.cpp
 listing-4.13 : src/capitulo4/4.13/spin-condvar.c
 	mkdir -p bin/capitulo4/4.13/
 	gcc src/capitulo4/4.13/spin-condvar.c -o bin/capitulo4/4.13/spin-condvar.o -lpthread
+
+listing-5.2 : src/capitulo5/5.2/sem_all_deall.c
+	mkdir -p bin/capitulo5/5.2/
+	gcc src/capitulo5/5.2/sem_all_deall.c -o bin/capitulo5/5.2/sem_all_deall.o
