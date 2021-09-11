@@ -25,3 +25,7 @@ listing-4.5 : src/capitulo4/4.5/detached.c
 listing-4.9 : src/capitulo4/4.9/cxx-exit.cpp
 	mkdir -p bin/capitulo4/4.9/
 	g++ src/capitulo4/4.9/cxx-exit.cpp -o bin/capitulo4/4.9/cxx-exit.o -lpthread
+
+listing-4.13 : src/capitulo4/4.13/spin-condvar.c
+	mkdir -p bin/capitulo4/4.13/
+	gcc src/capitulo4/4.13/spin-condvar.c -o bin/capitulo4/4.13/spin-condvar.o -lpthread
