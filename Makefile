@@ -9,3 +9,7 @@ listing-2.5 : src/capitulo2/2.5/temp_file.c
 listing-2.9 : src/capitulo2/2.9/tifftest.c
 	mkdir -p bin/capitulo2/2.9/
 	gcc src/capitulo2/2.9/tifftest.c -o bin/capitulo2/2.9/tifftest.o 
+
+listing-3.4 : src/capitulo3/3.4/fork-exec.c
+	mkdir -p bin/capitulo3/3.4/
+	gcc src/capitulo3/3.4/fork-exec.c -o bin/capitulo3/3.4/fork-exec.o 
