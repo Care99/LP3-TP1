@@ -22,6 +22,10 @@ listing-2.5 : src/capitulo2/2.5/temp_file.c
 	mkdir -p bin/capitulo2/2.5/
 	gcc src/capitulo2/2.5/temp_file.c -o bin/capitulo2/2.5/temp_file.o
 
+listing-2.6 : src/capitulo2/2.6/readfile.c
+	mkdir -p bin/capitulo2/2.6/
+	gcc src/capitulo2/2.6/readfile.c -o bin/capitulo2/2.6/readfile.o	
+
 listing-2.7 : src/capitulo2/2.7/test.c
 	mkdir -p bin/capitulo2/2.7/
 	gcc src/capitulo2/2.7/test.c -o bin/capitulo2/2.7/test.o	
