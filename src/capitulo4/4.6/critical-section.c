@@ -1,11 +1,15 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <string.h>
+
 /* An array of balances in accounts, indexed by account number. */
-float* account_balances;
+
+float account_balances[2];
+
 /* Transfer DOLLARS from account FROM_ACCT to account TO_ACCT. Return
 0 if the transaction succeeded, or 1 if the balance FROM_ACCT is
 too small. */
+
 int process_transaction (int from_acct, int to_acct, float dollars)
 {
 	int old_cancel_state;
@@ -20,4 +24,15 @@ int process_transaction (int from_acct, int to_acct, float dollars)
 	/* End critical section. */
 	pthread_setcancelstate (old_cancel_state, NULL);
 	return 0;
+}
+
+int main () {
+	account_balances[0] = 5000.0;
+	account_balances[1] = 500.0;
+
+	if(process_transaction(0,1,20.0) == 0) {
+		printf("transaccion exitosa\n");
+	} else {
+		printf("transaccion fallida\n");
+	}
 }
