@@ -1,4 +1,5 @@
 #include <pthread.h>
+#include <stdio.h>
 
 int thread_flag;
 pthread_cond_t thread_flag_cv;
@@ -11,6 +12,11 @@ void initialize_flag()
     /* Initialize the flag value. */
     thread_flag = 0;
 }
+
+void do_work (){
+    printf(" Realizando el trabajo \n");
+}
+
 /* Calls do_work repeatedly while the thread flag is set; blocks if
 the flag is clear. */
 void *thread_function(void *thread_arg)
@@ -20,15 +26,20 @@ void *thread_function(void *thread_arg)
     {
         /* Lock the mutex before accessing the flag value. */
         pthread_mutex_lock(&thread_flag_mutex);
-        while (!thread_flag)
+        printf("thread_function(): mutex lock\n");
+        while (!thread_flag) 
+        {
             /* The flag is clear. Wait for a signal on the condition
 variable, indicating that the flag value has changed. When the
 signal arrives and this thread unblocks, loop and check the
 flag again. */
+            printf("esperando cambio de valor de la bandera");
             pthread_cond_wait(&thread_flag_cv, &thread_flag_mutex);
+        }
         /* When we’ve gotten here, we know the flag must be set. Unlock
 the mutex. */
         pthread_mutex_unlock(&thread_flag_mutex);
+        printf("thread_function(): mutex unlock\n");
         /* Do some work. */
         do_work();
     }
@@ -39,6 +50,7 @@ void set_thread_flag(int flag_value)
 {
     /* Lock the mutex before accessing the flag value. */
     pthread_mutex_lock(&thread_flag_mutex);
+    printf("set_thread_flag(): mutex lock\n");
     /* Set the flag value, and then signal in case thread_function is
 blocked, waiting for the flag to become set. However,
 thread_function can’t actually check the flag until the mutex is
@@ -47,4 +59,15 @@ unlocked. */
     pthread_cond_signal(&thread_flag_cv);
     /* Unlock the mutex. */
     pthread_mutex_unlock(&thread_flag_mutex);
+    printf("set_thread_flag(): mutex unlock\n");
+    printf("Bandera inicializada a %d\n", flag_value);
+}
+pthread_t thread_id;
+
+int main(){
+    initialize_flag();
+    pthread_create(&thread_id, NULL, thread_function, NULL);
+    set_thread_flag(1);
+    sleep(1);
+    return 0;
 }
