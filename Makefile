@@ -37,3 +37,7 @@ listing-5.2 : src/capitulo5/5.2/sem_all_deall.c
 listing-5.5 : src/capitulo5/5.5/mmap-write.c
 	mkdir -p bin/capitulo5/5.5/
 	gcc src/capitulo5/5.5/mmap-write.c -o bin/capitulo5/5.5/mmap-write.o
+
+listing-5.10 : src/capitulo5/5.10/socket-server.c
+	mkdir -p bin/capitulo5/5.10/
+	gcc src/capitulo5/5.10/socket-server.c -o bin/capitulo5/5.10/socket-server.o
