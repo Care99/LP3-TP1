@@ -110,6 +110,10 @@ listing-5.7 : src/capitulo5/5.7/pipe.c
 	mkdir -p bin/capitulo5/5.7/
 	gcc src/capitulo5/5.7/pipe.c -o bin/capitulo5/5.7/pipe.o
 
+listing-5.9 : src/capitulo5/5.9/popen.c
+	mkdir -p bin/capitulo5/5.9/
+	gcc src/capitulo5/5.9/popen.c -o bin/capitulo5/5.9/popen.o	
+
 listing-5.10 : src/capitulo5/5.10/socket-server.c
 	mkdir -p bin/capitulo5/5.10/
 	gcc src/capitulo5/5.10/socket-server.c -o bin/capitulo5/5.10/socket-server.o
