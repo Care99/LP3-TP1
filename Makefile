@@ -38,6 +38,10 @@ listing-3.1 : src/capitulo3/3.1/print-pid.c
 	mkdir -p bin/capitulo3/3.1/
 	gcc src/capitulo3/3.1/print-pid.c -o bin/capitulo3/3.1/print-pid.o 
 
+listing-3.3 : src/capitulo3/3.3/fork.c
+	mkdir -p bin/capitulo3/3.3/
+	gcc src/capitulo3/3.3/fork.c -o bin/capitulo3/3.3/fork.o 
+
 listing-3.4 : src/capitulo3/3.4/fork-exec.c
 	mkdir -p bin/capitulo3/3.4/
 	gcc src/capitulo3/3.4/fork-exec.c -o bin/capitulo3/3.4/fork-exec.o 
