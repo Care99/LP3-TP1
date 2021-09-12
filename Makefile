@@ -50,6 +50,10 @@ listing-3.5 : src/capitulo3/3.5/sigusr1.c
 	mkdir -p bin/capitulo3/3.5/
 	gcc src/capitulo3/3.5/sigusr1.c -o bin/capitulo3/3.5/sigusr1.o 
 
+listing-3.7 : src/capitulo3/3.7/sigchld.c
+	mkdir -p bin/capitulo3/3.7/
+	gcc src/capitulo3/3.7/sigchld.c -o bin/capitulo3/3.7/sigchld.o 	
+
 listing-4.1 : src/capitulo4/4.1/thread-create.c
 	mkdir -p bin/capitulo4/4.1/
 	gcc src/capitulo4/4.1/thread-create.c -o bin/capitulo4/4.1/thread-create.o -lpthread
