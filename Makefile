@@ -6,6 +6,10 @@ listing-1.2 : listing-1.1
 
 listing-1.3 : listing-1.1	
 	
+listing-2.1 : src/capitulo2/2.1/arglist.c
+	mkdir -p bin/capitulo2/2.1/
+	gcc src/capitulo2/2.1/arglist.c -o bin/capitulo2/2.1/arglist.o
+
 listing-2.2 : src/capitulo2/2.2/getopt_long.c
 	mkdir -p bin/capitulo2/2.2/
 	gcc src/capitulo2/2.2/getopt_long.c -o bin/capitulo2/2.2/getopt_long.o
