@@ -32,6 +32,8 @@ void* compute_prime (void* arg)
     } 
     return NULL; 
 } 
+
+// para compilar en linux, gcc primes.c -lpthread
 int main () 
 {
     pthread_t thread; 
