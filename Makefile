@@ -6,6 +6,10 @@ listing-2.5 : src/capitulo2/2.5/temp_file.c
 	mkdir -p bin/capitulo2/2.5/
 	gcc src/capitulo2/2.5/temp_file.c -o bin/capitulo2/2.5/temp_file.o
 
+listin-2.7	: src/capitulo2/2.7/test.c
+	mkdir -p bin/capitulo2/2.7/
+	gcc src/capitulo2/2.7/test.c src/capitulo2/2.8/app.c -o bin/capitulo2/2.7/test.o
+
 listing-2.9 : src/capitulo2/2.9/tifftest.c
 	mkdir -p bin/capitulo2/2.9/
 	gcc src/capitulo2/2.9/tifftest.c -o bin/capitulo2/2.9/tifftest.o -ltiff
