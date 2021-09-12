@@ -86,6 +86,10 @@ listing-4.14 : src/capitulo4/4.14/condvar.c
 	mkdir -p bin/capitulo4/4.14/
 	gcc src/capitulo4/4.14/condvar.c -o bin/capitulo4/4.14/condvar.o -lpthread
 
+listing-5.1 : src/capitulo5/5.1/shm.c
+	mkdir -p bin/capitulo5/5.1/
+	gcc src/capitulo5/5.1/shm.c -o bin/capitulo5/5.1/shm.o
+
 listing-5.2 : src/capitulo5/5.2/sem_all_deall.c
 	mkdir -p bin/capitulo5/5.2/
 	gcc src/capitulo5/5.2/sem_all_deall.c -o bin/capitulo5/5.2/sem_all_deall.o
