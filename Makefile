@@ -58,6 +58,10 @@ listing-4.2 : src/capitulo4/4.2/thread-create2.c
 	mkdir -p bin/capitulo4/4.2/
 	gcc src/capitulo4/4.2/thread-create2.c -o bin/capitulo4/4.2/thread-create2.o -lpthread
 
+listing-4.4 : src/capitulo4/4.4/primes.c
+	mkdir -p bin/capitulo4/4.4/
+	gcc src/capitulo4/4.4/primes.c -o bin/capitulo4/4.4/primes.o -lpthread
+
 listing-4.5 : src/capitulo4/4.5/detached.c
 	mkdir -p bin/capitulo4/4.5/
 	gcc src/capitulo4/4.5/detached.c -o bin/capitulo4/4.5/detached.o -lpthread
