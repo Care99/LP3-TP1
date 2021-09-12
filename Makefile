@@ -98,6 +98,10 @@ listing-5.5 : src/capitulo5/5.5/mmap-write.c
 	mkdir -p bin/capitulo5/5.5/
 	gcc src/capitulo5/5.5/mmap-write.c -o bin/capitulo5/5.5/mmap-write.o
 
+listing-5.6 : src/capitulo5/5.6/mmap-read.c
+	mkdir -p bin/capitulo5/5.6/
+	gcc src/capitulo5/5.6/mmap-read.c -o bin/capitulo5/5.6/mmap-read.o 	
+
 listing-5.7 : src/capitulo5/5.7/pipe.c
 	mkdir -p bin/capitulo5/5.7/
 	gcc src/capitulo5/5.7/pipe.c -o bin/capitulo5/5.7/pipe.o
