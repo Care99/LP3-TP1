@@ -4,12 +4,12 @@ struct job
 {
     /* Link field for linked list.*/
     struct job* next;
-    /* Other fields describing work to be done... */
+    int cantidadDias;
 };
 
 /* A linked list of pending jobs.*/
 struct job* job_queue;
-
+void process_job(struct job* next_job);
 /* A mutex protecting job_queue. */
 pthread_mutex_t job_queue_mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -46,4 +46,22 @@ void* thread_function (void* arg)
         free (next_job);
     }
     return NULL;
+}
+
+void process_job(struct job* next_job)
+{
+    int i = 0;
+    while( next_job != NULL )
+    {
+        printf("La fabrica %d ha trabajado por %d dias\n",i,next_job->cantidadDias);
+        next_job = next_job->next;
+    }
+}
+
+int main(int argc, char const *argv[])
+{
+    pthread_t thread;
+    fprintf (stderr, "main thread pid is %d\n", (int) getpid ());
+    pthread_create (&thread, NULL, &thread_function, NULL);
+    return 0;
 }

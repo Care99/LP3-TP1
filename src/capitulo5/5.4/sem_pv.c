@@ -33,3 +33,11 @@ int binary_semaphore_post (int semid)
     operations[0].sem_flg = SEM_UNDO;
     return semop (semid, operations, 1);
 }
+
+int main() {
+    printf("inicializando semaforo\n");
+    int semaforo_id = semget(1492, 1, 0666 | IPC_CREAT);
+    int semaforo = binary_semaphore_wait(semaforo_id);
+    semaforo_id = binary_semaphore_post(semaforo_id);
+    return 0;
+}

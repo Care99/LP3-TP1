@@ -92,7 +92,7 @@ listing-4.6 : src/capitulo4/4.6/critical-section.c
 
 listing-4.7 : src/capitulo4/4.7/tsd.c
 	mkdir -p bin/capitulo4/4.7/
-	gcc src/capitulo4/4.7/tsd.c -o bin/capitulo4/4.7/tsd.o
+	gcc src/capitulo4/4.7/tsd.c -o bin/capitulo4/4.7/tsd.o -pthread
 
 listing-4.8 : src/capitulo4/4.8/cleanup.c
 	mkdir -p bin/capitulo4/4.8/
@@ -107,8 +107,8 @@ listing-4.10 : src/capitulo4/4.10/job-queue1.c
 	gcc src/capitulo4/4.10/job-queue1.c -o bin/capitulo4/4.10/job-queue1.o
 
 listing-4.11 : src/capitulo4/4.11/job-queue2.c
-	mkdir -p bin/capitulo3/4.11/
-	gcc src/capitulo4/4.11/job-queue2.c -o bin/capitulo4/4.11/job-queue2.o
+	mkdir -p bin/capitulo4/4.11/
+	gcc src/capitulo4/4.11/job-queue2.c -o bin/capitulo4/4.11/job-queue2.o -pthread
 	
 listing-4.12 : src/capitulo4/4.12/job-queue3.c
 	mkdir -p bin/capitulo4/4.12/
@@ -124,7 +124,7 @@ listing-4.14 : src/capitulo4/4.14/condvar.c
 
 listing-4.15 : src/capitulo4/4.15/thread-pid.c
 	mkdir -p bin/capitulo4/4.15/
-	gcc src/capitulo4/4.15/thread-pid.c -o bin/capitulo4/4.15/thread-pid.o
+	gcc src/capitulo4/4.15/thread-pid.c -o bin/capitulo4/4.15/thread-pid.o -lpthread
 
 listing-5.1 : src/capitulo5/5.1/shm.c
 	mkdir -p bin/capitulo5/5.1/
@@ -138,9 +138,9 @@ listing-5.3 : src/capitulo5/5.3/sem_init.c
 	mkdir -p bin/capitulo5/5.3/
 	gcc src/capitulo5/5.3/sem_init.c -o bin/capitulo5/5.3/sem_init.o
 
-listing-5.4 : src/capitulo5/3.2/sem_pv.c
-	mkdir -p bin/capitulo4/5.4/
-	gcc src/capitulo5/3.2/sem_pv.c -o bin/capitulo5/5.4/sem_pv.o
+listing-5.4 : src/capitulo5/5.4/sem_pv.c
+	mkdir -p bin/capitulo5/5.4/
+	gcc src/capitulo5/5.4/sem_pv.c -o bin/capitulo5/5.4/sem_pv.o
 	
 listing-5.5 : src/capitulo5/5.5/mmap-write.c
 	mkdir -p bin/capitulo5/5.5/
