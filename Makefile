@@ -82,6 +82,10 @@ listing-4.10 : src/capitulo4/4.10/job-queue1.c
 	mkdir -p bin/capitulo4/4.10/
 	gcc src/capitulo4/4.10/job-queue1.c -o bin/capitulo4/4.10/job-queue1.o
 
+listing-4.12 : src/capitulo4/4.12/job-queue3.c
+	mkdir -p bin/capitulo4/4.12/
+	gcc src/capitulo4/4.12/job-queue3.c -o bin/capitulo4/4.12/job-queue3.o -lpthread
+
 listing-4.13 : src/capitulo4/4.13/spin-condvar.c
 	mkdir -p bin/capitulo4/4.13/
 	gcc src/capitulo4/4.13/spin-condvar.c -o bin/capitulo4/4.13/spin-condvar.o -lpthread
