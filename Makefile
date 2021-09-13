@@ -38,7 +38,7 @@ listing-2.8 : listing-2.7
 
 listing-2.9 : src/capitulo2/2.9/tifftest.c
 	mkdir -p bin/capitulo2/2.9/
-	gcc src/capitulo2/2.9/tifftest.c  src/capitulo2/2.9/tiff.h src/capitulo2/2.9/tiffconf.h src/capitulo2/2.9/tiffio.h src/capitulo2/2.9/tiffvers.h -o bin/capitulo2/2.9/tifftest.o	
+	gcc src/capitulo2/2.9/tifftest.c  src/capitulo2/2.9/tiff.h src/capitulo2/2.9/tiffconf.h src/capitulo2/2.9/tiffio.h src/capitulo2/2.9/tiffvers.h -o bin/capitulo2/2.9/tifftest.o	-ltiff
 
 listing-3.1 : src/capitulo3/3.1/print-pid.c
 	mkdir -p bin/capitulo3/3.1/
