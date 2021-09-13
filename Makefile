@@ -19,7 +19,7 @@ listing-2.3 : src/capitulo2/2.3/print-env.c
 	gcc src/capitulo2/2.3/print-env.c -o bin/capitulo2/2.3/print-env.o
 
 listing-2.4 : src/capitulo2/2.4/client.c
-	mkdir -p /bin/capitulo2/2.4/
+	mkdir -p bin/capitulo2/2.4/
 	gcc src/capitulo2/2.4/client.c -o bin/capitulo2/2.4/client.o
 
 listing-2.5 : src/capitulo2/2.5/temp_file.c
