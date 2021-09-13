@@ -74,6 +74,10 @@ listing-4.6 : src/capitulo4/4.6/critical-section.c
 	mkdir -p bin/capitulo4/4.6/
 	gcc src/capitulo4/4.6/critical-section.c -o bin/capitulo4/4.6/critical-section.o
 
+listing-4.8 : src/capitulo4/4.8/cleanup.c
+	mkdir -p bin/capitulo4/4.8/
+	gcc src/capitulo4/4.8/cleanup.c -o bin/capitulo4/4.8/cleanup.o -lpthread
+
 listing-4.9 : src/capitulo4/4.9/cxx-exit.cpp
 	mkdir -p bin/capitulo4/4.9/
 	g++ src/capitulo4/4.9/cxx-exit.cpp -o bin/capitulo4/4.9/cxx-exit.o -lpthread

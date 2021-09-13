@@ -111,7 +111,7 @@ void process_job(struct job* job) {
 }
 
 int main() {
-        // se crean n trabajoas
+        // se crean n trabajos
         //cambiar el valor de n si se desean mas hilos
         int n=10;
         pthread_t thread_ids[n];

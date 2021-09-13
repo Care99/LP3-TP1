@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include<stdlib.h>
 #include<stdio.h>
+#include<time.h>
 
 /* Allocate a temporary buffer.*/
 
@@ -14,7 +15,7 @@ return malloc (size);
 
 void deallocate_buffer (void* buffer)
 {
-    printf("Deallocate a temporary buffer\n");
+    //printf("Deallocate a temporary buffer\n");
     free (buffer);
 }
 
@@ -31,7 +32,7 @@ pthread_cleanup_push (deallocate_buffer, temp_buffer);
 /* Do some work here that might call pthread_exit or might be
 cancelled... */
 
-int bandera=1+rand()%2;
+int bandera=rand()%2;
 
 if(bandera==1)
 {
@@ -52,7 +53,7 @@ pthread_cleanup_pop (1);
 
 int main()
 {
-
+srand(time(NULL));
     pthread_t hilo1;
     pthread_t hilo2;
     pthread_t hilo3;
