@@ -19,7 +19,7 @@ listing-2.3 : src/capitulo2/2.3/print-env.c
 	gcc src/capitulo2/2.3/print-env.c -o bin/capitulo2/2.3/print-env.o
 
 listing-2.4 : src/capitulo2/2.4/client.c
-	mkdir -p /bin/capitulo2/2.4/
+	mkdir -p bin/capitulo2/2.4/
 	gcc src/capitulo2/2.4/client.c -o bin/capitulo2/2.4/client.o
 
 listing-2.5 : src/capitulo2/2.5/temp_file.c
@@ -38,7 +38,7 @@ listing-2.8 : listing-2.7
 
 listing-2.9 : src/capitulo2/2.9/tifftest.c
 	mkdir -p bin/capitulo2/2.9/
-	gcc src/capitulo2/2.9/tifftest.c -o bin/capitulo2/2.9/tifftest.o	
+	gcc src/capitulo2/2.9/tifftest.c  src/capitulo2/2.9/tiff.h src/capitulo2/2.9/tiffconf.h src/capitulo2/2.9/tiffio.h src/capitulo2/2.9/tiffvers.h -o bin/capitulo2/2.9/tifftest.o	
 
 listing-3.1 : src/capitulo3/3.1/print-pid.c
 	mkdir -p bin/capitulo3/3.1/
