@@ -32,7 +32,7 @@ listing-2.6 : src/capitulo2/2.6/readfile.c
 
 listing-2.7 : src/capitulo2/2.7/app.c
 	mkdir -p bin/capitulo2/2.7/
-	gcc src/capitulo2/2.7/app.c -o bin/capitulo2/2.7/app.o	
+	gcc src/capitulo2/2.7/app.c src/capitulo2/2.7/tiff.h src/capitulo2/2.7/tiffconf.h src/capitulo2/2.7/tiffio.h src/capitulo2/2.7/tiffvers.h -o bin/capitulo2/2.7/app.o	
 
 listing-2.8 : listing-2.7
 
