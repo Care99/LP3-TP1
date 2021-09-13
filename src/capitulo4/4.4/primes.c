@@ -6,7 +6,7 @@
 */ 
 void* compute_prime (void* arg) 
 {
-    int candidate = 2; 
+    long candidate = 2; 
     int n = *((int*) arg); 
     while (1) 
     {

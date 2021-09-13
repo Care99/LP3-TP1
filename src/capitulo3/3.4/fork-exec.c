@@ -21,7 +21,7 @@ int spawn(char * program, char ** arg_list)
         /* Now execute PROGRAM, searching for it in the path. */
         execvp(program, arg_list);
         /* The execvp function returns only if an error occurs. */
-        printf(stderr, "an error ocurred in execvp\n");
+        fprintf(stderr, "an error ocurred in execvp\n");
         abort();
     }
 }

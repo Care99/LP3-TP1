@@ -17,7 +17,7 @@ int divisores;
 
 /* A linked list of pending jobs.*/
 struct job* job_queue;
-
+void process_job(struct job* job);
 /* A mutex protecting job_queue. */
 pthread_mutex_t job_queue_mutex = PTHREAD_MUTEX_INITIALIZER;
 

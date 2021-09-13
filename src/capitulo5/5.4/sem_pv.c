@@ -1,6 +1,7 @@
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
+#include <stdio.h>
 /* 
     Wait on a binary semaphore. Block until the semaphore value is positive, then
     decrement it by 1. 

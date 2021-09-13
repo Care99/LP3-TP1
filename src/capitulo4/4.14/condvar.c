@@ -1,6 +1,6 @@
 #include <pthread.h>
 #include <stdio.h>
-
+#include <unistd.h>
 int thread_flag;
 pthread_cond_t thread_flag_cv;
 pthread_mutex_t thread_flag_mutex;
